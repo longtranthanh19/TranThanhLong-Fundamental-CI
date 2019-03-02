@@ -1,3 +1,8 @@
+package game;
+
+import game.GamePanel;
+import game.GameWindow;
+
 import javax.swing.*;
 import java.awt.*;
 

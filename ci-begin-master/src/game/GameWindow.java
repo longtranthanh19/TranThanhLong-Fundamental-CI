@@ -1,3 +1,4 @@
+package game;
 
 import javax.swing.*;
 import java.awt.event.KeyAdapter;
@@ -8,9 +9,10 @@ public class GameWindow extends JFrame {
     public static boolean isDownPress;
     public static boolean isLeftPress;
     public static boolean isRightPress;
+    public static boolean isFirePress;
 
     public GameWindow() {
-        System.out.println("Init GameWindow");
+        System.out.println("Init game.GameWindow");
         // bat su kien ban phim
         KeyAdapter KeyHandler = new KeyAdapter() {
             @Override
@@ -26,6 +28,9 @@ public class GameWindow extends JFrame {
                 }
                 if (e.getKeyCode() == KeyEvent.VK_D ) {
                     isRightPress = true;
+                }
+                if (e.getKeyCode() == KeyEvent.VK_SPACE){
+                    isFirePress = true;
                 }
             }
 
@@ -43,7 +48,9 @@ public class GameWindow extends JFrame {
                 if (e.getKeyCode() == KeyEvent.VK_D ){
                     isRightPress = false;
                 }
-
+                if (e.getKeyCode() == KeyEvent.VK_SPACE ){
+                    isFirePress = false;
+                }
             }
 
 
