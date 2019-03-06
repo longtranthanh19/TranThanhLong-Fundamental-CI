@@ -12,49 +12,46 @@ public class GameWindow extends JFrame {
     public static boolean isFirePress;
 
     public GameWindow() {
-        System.out.println("Init game.GameWindow");
-        // bat su kien ban phim
-        KeyAdapter KeyHandler = new KeyAdapter() {
+        // bat su kien bam phim
+        KeyAdapter keyHandler = new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {
-                if (e.getKeyCode() == KeyEvent.VK_W ) {
+                if(e.getKeyCode() == KeyEvent.VK_W) {
                     isUpPress = true;
                 }
-                if (e.getKeyCode() == KeyEvent.VK_A ) {
-                    isLeftPress = true;
-                }
-                if (e.getKeyCode() == KeyEvent.VK_S ) {
+                if(e.getKeyCode() == KeyEvent.VK_S) {
                     isDownPress = true;
                 }
-                if (e.getKeyCode() == KeyEvent.VK_D ) {
+                if(e.getKeyCode() == KeyEvent.VK_A) {
+                    isLeftPress = true;
+                }
+                if(e.getKeyCode() == KeyEvent.VK_D) {
                     isRightPress = true;
                 }
-                if (e.getKeyCode() == KeyEvent.VK_SPACE){
+                if(e.getKeyCode() == KeyEvent.VK_SPACE) {
                     isFirePress = true;
                 }
             }
 
             @Override
             public void keyReleased(KeyEvent e) {
-                if (e.getKeyCode() == KeyEvent.VK_W ){
+                if(e.getKeyCode() == KeyEvent.VK_W) {
                     isUpPress = false;
                 }
-                if (e.getKeyCode() == KeyEvent.VK_A ){
-                    isLeftPress = false;
-                }
-                if (e.getKeyCode() == KeyEvent.VK_S ){
+                if(e.getKeyCode() == KeyEvent.VK_S) {
                     isDownPress = false;
                 }
-                if (e.getKeyCode() == KeyEvent.VK_D ){
+                if(e.getKeyCode() == KeyEvent.VK_A) {
+                    isLeftPress = false;
+                }
+                if(e.getKeyCode() == KeyEvent.VK_D) {
                     isRightPress = false;
                 }
-                if (e.getKeyCode() == KeyEvent.VK_SPACE ){
+                if(e.getKeyCode() == KeyEvent.VK_SPACE) {
                     isFirePress = false;
                 }
             }
-
-
         };
-        addKeyListener(KeyHandler);
+        addKeyListener(keyHandler);
     }
 }
